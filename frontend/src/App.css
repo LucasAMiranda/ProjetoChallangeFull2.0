@@ -1,0 +1,770 @@
+/* Estilo da barra superior */
+.rectangle-114 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 87px;
+  background: #F0F0F0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+}
+
+/* Estilo do título "Vendas" */
+.vendas-title {
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #00585E;
+}
+
+/* Estilo da seção "Vendas Realizadas" */
+.vendas-realizadas {
+  position: fixed;
+  top: 169px;
+  left: 48px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #00585E;
+}
+
+/* Estilo do layout automático */
+.auto-layout {
+  position: fixed;
+  top: 163px;
+  right: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 23px;
+  background: #00585E;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+
+.auto-layout-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+.vendas-info {
+  position: fixed;
+  top: 240px;
+  left: 122px;
+  display: flex;
+  align-items: center;
+}
+
+
+.cliente,
+.nota-fiscal,
+.vendedor,
+.data-venda,
+.valor-total,
+.opcoes {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000000;
+  padding-right: 20px;
+}
+
+
+.linha-reta {
+  position: fixed;
+}
+
+.linha-reta::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 122px);
+  height: 1px;
+  top: 36px;
+  left: 122px;
+  background: #E8E8E8;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background: #F2F2F2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+
+}
+
+.menu-container.open .menu-content {
+  transform: translateX(0);
+}
+
+
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.menu-icon {
+  color: #00585E;
+  font-size: 24px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.menu-text {
+  margin-left: 4px;
+  margin-top: 20px; 
+  padding: 20px;
+  position: fixed;
+}
+
+.vendas-option {
+  position: fixed;
+  left: 22.71%;
+  right: 58.61%;
+  top: 4.28%;
+  bottom: auto;
+  margin-bottom: 16px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 508.19%;
+  display: flex;
+  align-items: center;
+  color: #2B7D83;
+}
+
+.comissoes-option {
+  position: fixed;
+  left: 22.71%;
+  right: 49.45%;
+  top: 17.48%; 
+  bottom: auto;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #2B7D83;
+}
+
+/* Produtos de Nova Venda */
+
+/* Produtos */
+
+.produtos {
+  position: absolute;
+  width: 98px;
+  height: 32px;
+  left: 71px;
+  top: 132px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.produtos-text {
+  position: absolute;
+  width: 98px;
+  height: 32px;
+  left: 71px;
+  top: 132px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+/* Buscar pelo código de barras ou descrição */
+
+.buscar-container {
+  position: absolute;
+  width: 284px;
+  height: 20px;
+  left: 71px;
+  top: 185px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.rectangle-115 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 450px;
+  height: 44px;
+  left: 71px;
+  top: 211px;
+  background: #FFFFFF;
+  border: 0.5px solid #108158;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+/* Quantidade de itens */
+.quantidade-itens {
+  position: absolute;
+  width: 134px;
+  height: 20px;
+  left: 539px;
+  top: 185px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+/* Quantidade de itens input */
+/* Rectangle 116 */
+.rectangle-116 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 164px;
+  height: 44px;
+  left: 539px;
+  top: 211px;
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+/* Quantidade de itens input */
+.quantidade-itens-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 0 10px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133.19%;
+  color: #000000;
+}
+
+/* Rectangle 117 */
+.rectangle-117 {
+  position: absolute;
+  width: 110px;
+  height: 44px;
+  left: 721px;
+  top: 211px;
+  background: #00585E;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 133.19%;
+  border: none;
+  cursor: pointer;
+}
+
+.line-1 {
+  position: absolute;
+  width: 1px;
+  height: 587px;
+  left: 870px;
+  top: 182px;
+  background-color: #C4C4C4;
+  transform: rotate(90deg);
+}
+/* Dados da venda */
+.dados-venda {
+  position: absolute;
+  width: 171px;
+  height: 32px;
+  left: 912px;
+  top: 132px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+/* Data e Hora da Venda */
+.data-hora-venda {
+  position: absolute;
+  width: 172px;
+  height: 20px;
+  left: 911px;
+  top: 185px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+/* Rectangle 118 */
+.rectangle-118 input {
+  box-sizing: border-box;
+  position: absolute;
+  width: 422px;
+  height: 44px;
+  left: 911px;
+  top: 209px;
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+/* Escolha um vendedor */
+
+
+/* Escolha um vendedor */
+
+.vendedor-text {
+    position: absolute;
+    width: 147.14px;
+    height: 20px;
+    left: 911px;
+    top: 280px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133.19%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+
+
+  /* Escolha um vendedor */
+
+.select-vendedor {
+  box-sizing: border-box;
+  position: absolute;
+  width: 422px;
+  height: 44px;
+  left: 911px;
+  top: 306px;
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+
+.select-vendedor select {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133.19%;
+  color: #000000;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.select-vendedor select option {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133.19%;
+  color: #000000;
+}
+/* Escolha um cliente */
+.choose-client-select {
+  position: absolute;
+  left: 911px;
+  top: 381px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  width: 422px;
+  height: 44px;
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  border-radius: 3px;
+}
+
+/*
+.choose-client-container {
+  position: absolute;
+  width: 422px;
+  height: 44px;
+  left: 911px;
+  top: 407px;
+  background: #FFFFFF;
+  border: 0.5px solid #C4C4C4;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+}
+*/
+
+/*
+.choose-client-select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 5px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #000000;
+}
+*/
+
+.valor-total-venda {
+  position: absolute;
+  width: 166px;
+  height: 24px;
+  left: 911px;
+  top: 624px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.cancelar-button {
+  position: absolute;
+  width: 110px;
+  height: 44px;
+  left: 911px;
+  top: 712px;
+  background: #00585E;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+}
+
+.finalizar-button {
+  position: absolute;
+  width: 137px;
+  height: 44px;
+  left: 1216px;
+  top: 712px;
+  background: #2B7D83;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: none;
+}
+
+.produtos-servico {
+  position: absolute;
+  width: 141px;
+  height: 24px;
+  left: 71px;
+  top: 327px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.quantidade {
+  position: absolute;
+  width: 93px;
+  height: 24px;
+  left: 355px;
+  top: 327px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.preco-unitario {
+  position: absolute;
+  width: 114px;
+  height: 24px;
+  left: 539px;
+  top: 327px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.total {
+  position: absolute;
+  width: 41px;
+  height: 24px;
+  left: 744px;
+  top: 327px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133.19%;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.delete-icon {
+  margin-right: -35px;
+  color: #ff0000;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+
+.rectangle-114 {
+  position: relative;
+  background: #FFFFFF;
+  padding: 20px;
+  
+}
+
+.vendas-info {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.opcoes {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  
+}
+
+.rectangle-114 {
+  position: relative;
+  background: #FFFFFF;
+  padding: 20px;
+  
+}
+
+.vendas-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr auto;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.opcoes {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+ 
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+
+}
+
+.dropdown-item {
+  margin: 5px 0;
+
+}
+
+.opcoes-icon {
+  margin-left: 10px;
+  cursor: pointer;
+ 
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  
+}
+
+.modal-message {
+  margin-bottom: 10px;
+  
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+
+}
+
+.modal-btn {
+  margin: 0 10px;
+ 
+}
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.dropdown-item {
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.dropdown-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Modal de quando for finalizar a venda no cadastro da nova venda.*/
+.modal-success {
+  position: fixed;
+  width: 527px;
+  height: 68px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #B7E0D1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-success-message {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133.19%;
+  color: #42474A;
+}
