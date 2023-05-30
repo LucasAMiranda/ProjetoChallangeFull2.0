@@ -23,7 +23,7 @@ class Menu extends Component {
     return (
       <div className={`menu-container ${isOpen ? 'open' : ''}`}>
         <div className="menu-content">
-          <Link to="api/venda" className="menu-item vendas-option">
+          <Link to="/" className="menu-item vendas-option">
             <span className="menu-icon"></span>
             <div className="menu-text">Vendas</div>
           </Link>
