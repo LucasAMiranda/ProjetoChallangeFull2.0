@@ -12,7 +12,7 @@ const Vendas = () => {
   const [showSuccessModal] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/venda/')
+    fetch('http://localhost:8000/api/venda-list/')
       .then(response => response.json())
       .then(data => setVendas(data))
       .catch(error => console.log(error));

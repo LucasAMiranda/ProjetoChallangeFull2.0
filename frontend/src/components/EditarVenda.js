@@ -30,7 +30,7 @@ class EditarVenda extends Component {
 
   fetchVenda = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/venda/');
+      const response = await axios.get('http://localhost:8000/api/venda-list/');
       const vendaData = response.data;
 
       this.setState({ venda: vendaData });
@@ -42,7 +42,7 @@ class EditarVenda extends Component {
 
   fetchVendedores = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/vendedor/');
+      const response = await axios.get('http://localhost:8000/api/vendedor-list/');
       this.setState({ vendedores: response.data });
     } catch (error) {
       console.error(error);
@@ -51,7 +51,7 @@ class EditarVenda extends Component {
 
   fetchClientes = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/cliente/');
+      const response = await axios.get('http://localhost:8000/api/cliente-list/');
       this.setState({ clientes: response.data });
     } catch (error) {
       console.error(error);
@@ -61,7 +61,7 @@ class EditarVenda extends Component {
   adicionarProduto = async () => {
     const { venda, produtoSelecionadoId, quantidadeProduto } = this.state;
     try {
-      const response = await axios.post('http://localhost:8000/api/venda/', {
+      const response = await axios.post('http://localhost:8000/api/venda-list/', {
         venda_id: venda.id,
         produto_id: produtoSelecionadoId,
         quantidade: quantidadeProduto,
@@ -87,7 +87,7 @@ class EditarVenda extends Component {
   handleExcluirInformacoes = async (produtoId) => {
     const { venda } = this.state;
     try {
-      await axios.delete(`http://localhost:8000/api/venda/${produtoId}`);
+      await axios.delete(`http://localhost:8000/api/venda-list/${produtoId}`);
 
       const updatedVenda = {
         ...venda,
@@ -125,7 +125,7 @@ class EditarVenda extends Component {
   finalizarVenda = async () => {
     const { venda, totalVenda } = this.state;
     try {
-      await axios.post('http://localhost:8000/api/venda/', {
+      await axios.post('http://localhost:8000/api/venda-list/', {
         venda_id: venda.id,
         produtos: venda.produtos,
         total: totalVenda,

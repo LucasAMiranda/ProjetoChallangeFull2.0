@@ -28,9 +28,9 @@ class NovaVenda extends Component {
 
   fetchData = async () => {
     try {
-      const responseVenda = await axios.get('http://localhost:8000/api/venda/');
-      const responseVendedores = await axios.get('http://localhost:8000/api/vendedor/');
-      const responseClientes = await axios.get('http://localhost:8000/api/cliente/');
+      const responseVenda = await axios.get('http://localhost:8000/api/venda-list/');
+      const responseVendedores = await axios.get('http://localhost:8000/api/vendedor-list');
+      const responseClientes = await axios.get('http://localhost:8000/api/cliente-list/');
 
       const vendaData = responseVenda.data;
       const vendedoresData = responseVendedores.data;
@@ -57,7 +57,7 @@ class NovaVenda extends Component {
     } = this.state;
 
     try {
-      const response = await axios.post('http://localhost:8000/api/produto/', {
+      const response = await axios.post('http://localhost:8000/api/produto-list/', {
         venda_id: venda.id,
         produto_id: produtoSelecionadoId,
         quantidade: quantidadeProduto,
@@ -84,7 +84,7 @@ class NovaVenda extends Component {
     const { venda } = this.state;
 
     try {
-      await axios.delete(`http://localhost:8000/api/venda/${produtoId}`);
+      await axios.delete(`http://localhost:8000/api/venda-list/${produtoId}`);
       const updatedVenda = {
         ...venda,
         produtos: venda.produtos.filter((produto) => produto.id !== produtoId),
@@ -119,7 +119,7 @@ class NovaVenda extends Component {
     const { venda, totalVenda, setShowSuccessModal } = this.state;
 
     try {
-      await axios.post(`http://localhost:8000/api/venda/${venda.id}`, {
+      await axios.post(`http://localhost:8000/api/venda-list/${venda.id}`, {
         produtos: venda.produtos,
         total: totalVenda,
       });
