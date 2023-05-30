@@ -10,7 +10,7 @@
 
 ` source venv/bin/activate `
 
-**Crie um superuser no DjangoAdmin**
+**Crie um superuser no DjangoAdmin e DjangoRest**
 
 `python manage.py createsuperuser`
 
